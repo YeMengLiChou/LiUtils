@@ -385,8 +385,8 @@ abstract class BaseRecyclerAdapter<VB : ViewBinding, T>(
             this.data.removeAt(size - 1)
             notifyItemRemoved(getRealPosition(size) - 1)
         } else {
-            require(position >= data.size) {
-                "remove $position out of the length $size"
+            require(position < data.size) {
+                "remove the position $position out of the length $size"
             }
             this.data.removeAt(position)
             val realPosition = getRealPosition(position)
