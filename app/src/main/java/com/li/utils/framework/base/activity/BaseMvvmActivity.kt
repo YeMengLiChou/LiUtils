@@ -18,7 +18,7 @@ abstract class BaseMvvmActivity<VB : ViewBinding, VM : ViewModel>
     /**
      * 该 Activity 对应的 [ViewModel] 实例
      * */
-    private val viewModel: VM by lazy(mode = LazyThreadSafetyMode.NONE) {
+    protected val viewModel: VM by lazy(mode = LazyThreadSafetyMode.NONE) {
         initViewModel()
     }
 
